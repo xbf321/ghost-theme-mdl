@@ -1,0 +1,35 @@
+{
+  "name": "mdl",
+  "description": "use Material Design Lite",
+  "version": "2.2.1",
+  "engines": {
+    "ghost": ">=1.2.0"
+  },
+  "license": "MIT",
+  "scripts": {
+    "dev": "gulp"
+  },
+  "author": {
+    "name": "xbf321",
+    "email": "xbf321@gmail.com",
+    "url": "https://github.com/xbf321"
+  },
+  "keywords": [
+    "ghost",
+    "theme"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/xbf321/ghost-theme-mdl.git"
+  },
+  "devDependencies": {
+    "gulp": "3.9.1",
+    "gulp-livereload": "^3.8.1",
+    "gulp-sass": "^4.0.1",
+    "autoprefixer": "^5.0.0",
+    "gulp-postcss": "6.1.1",
+    "cssnano": "3.7.1",
+    "gulp-watch": "^5.0.0",
+    "postcss-easy-import": "1.0.1"
+  }
+}

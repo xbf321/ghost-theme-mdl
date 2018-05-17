@@ -1,0 +1,47 @@
+/**** Mobile layout ****/
+@media (max-width: 900px) {
+
+    .m-content {
+        padding: .8rem;
+    }
+
+    .m-pages {
+        padding: 0;
+        display: block;
+
+        &__inner {
+            padding: 0;
+        }
+    }
+
+    .m-header__nav-container,
+    .m-siderbar,
+    .m-hoc {
+        display: none !important;
+    }
+
+    .m-post {
+        padding: 0;
+
+        &__nav {
+            flex-direction: column;
+        }
+
+        &__nav-prev,
+        &__nav-next {
+            text-align: left;
+        }
+    }
+
+    .m-post-card {
+        margin-bottom: 10px;
+    }
+
+    .m-footer {
+        flex-direction: column;
+        &__item {
+            text-align: center;
+        }
+
+    }
+}

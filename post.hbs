@@ -1,0 +1,49 @@
+{{!< default}}
+
+{{#post}}
+<div class="g-flexbox m-pages">
+    <main class="g-flex m-post">
+        <h1 class="m-post__title">{{title}}</h1>
+        <p>{{date format="YYYY-MM-DD"}}</p>
+        <div class="m-post__content" id="js-post-content">{{content}}</div>
+        <div>
+            {{#primary_tag}}
+                标签：<a href="{{url}}">{{name}}</a>
+            {{/primary_tag}}
+        </div>
+        <div class="g-flexbox m-post__nav">
+            <div class="g-flex g-text-left m-post__nav-prev">
+                {{#prev_post}}
+                    上一篇：<a href="{{url}}">{{title}}</a>
+                {{/prev_post}}
+            </div>
+            <div class="g-flex g-text-right m-post__nav-next">
+                {{#next_post}}
+                   下一篇：<a href="{{url}}">{{title}}</a>
+                {{/next_post}}
+            </div>
+        </div>
+    </main>
+    <nav class="m-hoc">
+        <div class="m-hoc__box" id="js-hoc-box">
+            <a href="#top_of_page" class="m-hoc__top-text">目录</a>
+        </div>
+    </nav>
+</div>
+{{/post}}
+
+{{#contentFor "scripts"}}
+<script src="{{asset "js/prettify.js"}}"></script>
+<script src="{{asset "js/hoc.js"}}"></script>
+<script>
+    $(function(){
+        $('pre').addClass('prettyprint');
+        $('#js-hoc-box').initTOC({
+            selector: "h1, h2, h3, h4, h5, h6",
+            scope: "#js-post-content",
+            overwrite: false,
+            prefix: "toc"
+        });
+    });
+</script>
+{{/contentFor}}

@@ -1,0 +1,5 @@
+<nav class="mdl-navigation">
+    {{#foreach navigation}}
+    <a class="mdl-navigation__link mdl-typography--text-uppercase {{#if current}} nav-current{{/if}}" href="{{url absolute="true"}}">{{label}}</a>
+    {{/foreach}}
+</nav>

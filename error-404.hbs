@@ -1,0 +1,19 @@
+{{!< default}}
+
+<main class="m-pages">
+    <section class="m-error">
+        <h1 class="m-error__code">{{code}}</h1>
+        <p class="m-error__desc">{{message}}</p>
+        <a class="m-error__link" href="{{@blog.url}}">返回首页 →</a>
+    </section>
+    {{!-- The main content area --}}
+    {{#get "posts" limit="3"}}
+        <ul class="mdl-list m-list">
+            {{#foreach posts}}
+                <li class="mdl-list__item">
+                    {{> "post-card"}}
+                </li>
+            {{/foreach}}
+        </ul>
+    {{/get}}
+</main>

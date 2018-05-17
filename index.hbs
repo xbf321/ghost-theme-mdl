@@ -1,0 +1,24 @@
+{{!< default}}
+
+<div class="g-flexbox m-pages">
+    <main class="g-flex m-pages__inner">
+        {{#foreach posts}}
+            {{> "post-card"}}
+        {{/foreach}}
+        {{pagination}}
+    </main>
+    <aside class="m-siderbar">
+        <div class="m-site-intro">
+            <h6 class="m-site-intro__title">关于</h6>
+            <div class="m-site-intro__desc">{{@blog.description}}</div>
+        </div>
+        <div class="m-tag-cloud">
+            <h6 class="m-tag-cloud__title">标签云</h6>
+            {{#get "tags" limit="2"}}
+                {{#foreach tags}}
+                    <a href="{{url}}" title="{{name}}" class="m-tag-cloud__label tag tag-{{id}} {{slug}}">{{name}}</a>
+                {{/foreach}}
+            {{/get}}
+        </div>
+    </aside>
+</div>
