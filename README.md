@@ -14,8 +14,9 @@ git clone https://github.com/xbf321/ghost-theme-mdl.git
 
 ```bash
 npm install
-npm run gulp
+npm run dev
 ```
 
 ## 参考
+
 [Material Design Lite](https://getmdl.io/index.html)

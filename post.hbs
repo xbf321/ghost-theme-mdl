@@ -6,11 +6,7 @@
         <h1 class="m-post__title">{{title}}</h1>
         <p>{{date format="YYYY-MM-DD"}}</p>
         <div class="m-post__content" id="js-post-content">{{content}}</div>
-        <div>
-            {{#primary_tag}}
-                标签：<a href="{{url}}">{{name}}</a>
-            {{/primary_tag}}
-        </div>
+        {{tags prefix="标签："}}
         <div class="g-flexbox m-post__nav">
             <div class="g-flex g-text-left m-post__nav-prev">
                 {{#prev_post}}
@@ -23,6 +19,7 @@
                 {{/next_post}}
             </div>
         </div>
+        {{> "comment"}}
     </main>
     <nav class="m-hoc">
         <div class="m-hoc__box" id="js-hoc-box">
