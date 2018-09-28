@@ -1,5 +1,9 @@
 {{!< default}}
 
+{{#contentFor "header"}}
+    <link rel="stylesheet" type="text/css" href="{{asset "build/gitalk.css"}}" />
+    <script src="{{asset "js/gitalk.js"}}"></script>
+{{/contentFor}}
 {{#post}}
 <div class="g-flexbox m-pages">
     <main class="g-flex m-post">
