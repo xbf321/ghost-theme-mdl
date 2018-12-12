@@ -3,9 +3,14 @@
 .m-header {
     background-color: #4285f4;
 
-    &__title {
+    &__title,
+    &__short-title {
         color: #ffffff;
         font-weight: 500;
+    }
+
+    &__short-title {
+        display: none;
     }
 
     .mdl-navigation__link {
@@ -13,17 +18,18 @@
     }
 }
 
-/* 主内容 */
+/* 全局内容容器 */
 .m-content {
     padding: 0 60px;
 }
 
+/* 页面容器 */
 .m-pages {
     max-width: 1040px;
     margin: 0 auto;
 
     &__inner {
-        padding: 16px 16px 0 0;
+        padding: 16px 0 16px 0;
     }
 }
 
@@ -34,15 +40,12 @@
     margin-bottom: 16px;
     box-shadow: 0 1px 3px 0 rgba(0,0,0,.2), 0 1px 1px 0 rgba(0,0,0,.14), 0 2px 1px -1px rgba(0,0,0,.12);
 
-    &__actions {
-        display: flex;
-    }
 
     &__title-text {
         color: rgba(0,0,0,1);
         font-size: 20px;
         font-weight: 500;
-        line-height: 20px;
+        line-height: 1.52947;
     }
 
     &__more {
@@ -79,18 +82,61 @@
 /* 文章信息 */
 .m-post {
     padding: 10px;
+    max-width: 800px;
 
-    &__content {
-        color: rgba(0,0,0,.87);
-        font-size: 14px;
-        margin: 0 0 20px 0;
-        line-height: 32px;
-        img {
-            width: 100%;
-        }
+    h1,
+    h2,
+    h3 {
+        margin: 0;
+        word-spacing: 1px;
+        font-weight: 700;
+        color: #262626;
     }
+
     p {
-        font-size: 14px;
+        margin-top: 13px;
+        font-size: 17px;
+        line-height: 1.52947;
+        color: #333;
+    }
+
+    h1 {
+        font-size: 28px;
+        line-height: 36px;
+        padding: 7px 0;
+    }
+
+    h2 {
+        font-size: 24px;
+        line-height: 32px;
+        padding: 7px 0;
+    }
+
+    h3 {
+        font-size: 20px;
+        line-height: 28px;
+        padding: 7px 0;
+    }
+
+    li {
+        line-height: 1.52947;
+        font-size: 17px;
+    }
+
+    img {
+        width: 100%;
+    }
+
+    &__title {
+        font-size: 32px !important;
+        padding: 0;
+        margin: 0;
+    }
+
+
+    &__date {
+        margin-bottom: 10px !important;
+        font-style: italic;
     }
 
     &__nav {
@@ -98,8 +144,10 @@
         margin-top: 16px;
         padding: 16px 0;
     }
+
 }
 
+/* Tag 信息*/
 .m-tag {
     padding: 32px 0 16px 0;
     font-size: 26px;
@@ -112,6 +160,8 @@
         font-size: 20px;
     }
 }
+
+/* 站点信息和 Tag 云*/
 .m-site-intro,
 .m-tag-cloud {
     margin-bottom: 16px;
@@ -131,6 +181,7 @@
     }
 }
 
+/* 目录 */
 .m-hoc {
     width: 250px;
     padding: 16px 0;
@@ -157,6 +208,7 @@
     ol {
         padding: 0 0 0 16px;
         margin: 0;
+        list-style: none;
 
         a {
             color: #212121;
@@ -168,17 +220,18 @@
     }
 }
 
+/* 页脚 */
 .m-footer {
-    margin-top: 16px;
     background: #f7f7f7;
     padding: 16px;
 }
 
+/* 分页信息 */
 .pagination {
     text-align: center;
 }
 
-/*错误信息*/
+/* 错误信息 */
 .m-error {
     text-align: center;
     padding: 16px;

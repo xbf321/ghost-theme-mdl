@@ -1,6 +1,15 @@
 /**** Mobile layout ****/
 @media (max-width: 900px) {
 
+    .m-header {
+        &__title {
+            display: none !important;
+        }
+        &__short-title {
+            display: block !important;
+        }
+    }
+
     .m-content {
         padding: 16px;
     }
@@ -33,15 +42,10 @@
         }
     }
 
-    .m-post-card {
-        margin-bottom: 10px;
-    }
-
     .m-footer {
         flex-direction: column;
         &__item {
             text-align: center;
         }
-
     }
 }
