@@ -15,6 +15,7 @@ a {
     font-weight: 400;
     src: url(font.woff2) format('woff2');
 }
+
   
 .material-icons {
     font-family: 'Material Icons';
@@ -45,5 +46,22 @@ a {
 
 .g-text-right {
     text-align: right;
+}
+
+blockquote {
+    border-left: .25em solid #dfe2e5;
+    color: #6a737d;
+    padding: 0 10px;
+    margin: 16px 0px;
+    font-size: 17px;
+
+    &::before,
+    &::after {
+        display: none;
+    }
+}
+
+hr {
+    margin: 16px;
 }
 
